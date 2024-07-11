@@ -1,16 +1,24 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SignUp from "../components/SignUp/SignUp";
-import SignIn from "../components/SignIn/SignIn";
+import { useContext } from "react";
+import Home from "../pages/Home/Home";
+import NotFound from "../pages/notFound";
+import register from "../utils/register";
+import RegisterContext from "../context/RegisterContext";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 const Root = () => {
+  const { defValue } = useContext(RegisterContext);
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<SignUp />} />
-        <Route path="/signIn" element={<SignIn />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          {register.map(({ id, path, element: Element }) => {
+            return <Route key={id} path={path} element={<Element />} />;
+          })}
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 };
 

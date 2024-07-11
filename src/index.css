@@ -15,9 +15,9 @@
 }
 
 body {
+  overflow-x: hidden;
   font-family: "Mulish", sans-serif;
   background-image: url("./assets/images/bg.svg");
   background-repeat: no-repeat;
-  background-position: -25% 0%;
   background-attachment: fixed;
 }
