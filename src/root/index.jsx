@@ -4,6 +4,7 @@ import NotFound from "../pages/notFound";
 import register from "../utils/register";
 import RegisterContext from "../context/RegisterContext";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Navbar from "../components/Navbar/Navbar";
 
 const Root = () => {
   const { defValue } = useContext(RegisterContext);
@@ -14,7 +15,9 @@ const Root = () => {
           {register.map(({ id, path, element: Element }) => {
             return <Route key={id} path={path} element={<Element />} />;
           })}
-          <Route path="/" element={<Home />} />
+          <Route element={<Navbar />}>
+            <Route path="/" element={<Home />} />
+          </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
