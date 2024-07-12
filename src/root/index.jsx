@@ -19,7 +19,7 @@ const Root = () => {
               <Route element={<Navbar />}>
                 <Route path="/" element={<Home />} />
               </Route>
-              <Route path="*" element={<NotFound />} />
+              <Route path="/404" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
         </BookProvider>
