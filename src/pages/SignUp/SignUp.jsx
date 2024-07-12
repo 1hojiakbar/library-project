@@ -69,7 +69,7 @@ const SignUp = () => {
 
   useEffect(() => {
     if (defValue === true) {
-      navigate("/home");
+      navigate("/");
     }
   }, [defValue]);
 

@@ -47,7 +47,7 @@ const SignIn = () => {
           </Button>
           <Form.SubTitle>
             Already signed up?
-            <FormLink to={"/"}>Back to sign up.</FormLink>
+            <FormLink to={"/signUp"}>Back to sign up.</FormLink>
           </Form.SubTitle>
         </InputWrapper>
       </Form>

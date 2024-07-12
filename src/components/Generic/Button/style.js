@@ -30,8 +30,10 @@ export const GenericButton = styled.button`
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   text-align: center;
+  column-gap: ${({ xgap }) => xgap && xgap};
+  row-gap: ${({ ygap }) => ygap && ygap};
   width: ${({ w }) => (w ? w : "100%")};
   height: ${({ h }) => (h ? h : "40px")};
   margin-top: ${({ mt }) => (mt ? mt : "0")};
