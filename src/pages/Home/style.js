@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -5,7 +6,6 @@ const Container = styled.div`
   flex-direction: column;
   width: 100%;
   padding: 26px 58px 0 58px;
-  border: 1px solid rebeccapurple;
   height: calc(100vh - 72px);
   min-height: calc(100vh - 72px);
 `;
@@ -49,7 +49,20 @@ const BookCardWrapper = styled.div`
   column-gap: 20px;
   width: 100%;
   padding-top: 26px;
-  border: 1px solid rebeccapurple;
 `;
 
-export { Container, BookCardWrapper, HomeTitleWrapper };
+const ISBNInput = styled(TextField)({
+  width: "100%",
+  color: "#000",
+  "& .MuiInputBase-input": {
+    display: "flex",
+    alignItems: "center",
+    height: "15px",
+    color: "#000",
+  },
+  "& .MuiInputBase-input::placeholder": {
+    color: "#000",
+  },
+});
+
+export { Container, BookCardWrapper, HomeTitleWrapper, ISBNInput };

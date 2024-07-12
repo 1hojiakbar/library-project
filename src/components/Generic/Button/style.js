@@ -11,6 +11,7 @@ const getType = ({ type }) => {
       return {
         background: "transparent",
         color: "rgb(98, 0, 238)",
+        border: "1px solid rgb(98, 0, 238)",
       };
 
     default:
