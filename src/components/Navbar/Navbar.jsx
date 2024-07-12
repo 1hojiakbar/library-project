@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import logo from "../../assets/icons/logo.svg";
 import searchIcon from "../../assets/icons/search.svg";
 import usr_avatar from "../../assets/icons/avatar.svg";
@@ -17,6 +17,7 @@ import {
 import { InputAdornment } from "@mui/material";
 
 const Navbar = () => {
+  const navigate = useNavigate("");
   return (
     <Container>
       <NavbarWrapper>
@@ -51,7 +52,11 @@ const Navbar = () => {
               src={notficationIcon}
               alt="notfication icon not found"
             />
-            <UserAvatarWrapper.Image src={usr_avatar} alt="avatar not found" />
+            <UserAvatarWrapper.Image
+              src={usr_avatar}
+              alt="avatar not found"
+              onClick={() => navigate("/signUp")}
+            />
           </UserAvatarWrapper>
         </Section>
       </NavbarWrapper>

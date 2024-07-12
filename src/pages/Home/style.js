@@ -45,7 +45,7 @@ Container.SubTitle = styled.p`
 
 const BookCardWrapper = styled.div`
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 360px 360px 360px;
   column-gap: 20px;
   width: 100%;
   padding-top: 26px;

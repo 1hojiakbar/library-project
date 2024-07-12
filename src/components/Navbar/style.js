@@ -79,6 +79,7 @@ const UserAvatarWrapper = styled.div`
   ${flex}
   align-items: center;
   column-gap: 14px;
+  cursor: pointer;
 `;
 
 UserAvatarWrapper.Image = styled.img`

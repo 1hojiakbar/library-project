@@ -1,13 +1,15 @@
 import { useContext } from "react";
-import bookData from "../../utils/books";
+import Modal from "./Modal";
 import plusIcon from "../../assets/icons/plus.svg";
+import BookContext from "../../context/BookContext";
 import ModalContext from "../../context/ModalContext";
 import Button from "../../components/Generic/Button/Button";
 import GenericCard from "../../components/Generic/Card/Card";
 import { BookCardWrapper, Container, HomeTitleWrapper } from "./style";
-import Modal from "./Modal";
+import CustomSnackbar from "./Snackbar";
 
 const Home = () => {
+  const { data } = useContext(BookContext);
   const { openModal } = useContext(ModalContext);
   return (
     <Container>
@@ -30,10 +32,11 @@ const Home = () => {
         </Button>
       </HomeTitleWrapper>
       <BookCardWrapper>
-        {bookData.map(({ id, title, data, date, status }) => {
+        {data.map(({ id, title, data, date, status }) => {
           return (
             <GenericCard
               key={id}
+              id={id}
               title={title}
               data={data}
               date={date}
@@ -42,6 +45,7 @@ const Home = () => {
           );
         })}
       </BookCardWrapper>
+      <CustomSnackbar />
       <Modal />
     </Container>
   );
