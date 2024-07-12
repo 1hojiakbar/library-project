@@ -53,6 +53,14 @@ const SearchInputWrapper = styled.div`
   ${flex}
   align-items: center;
   width: 300px;
+  @media (max-width: 1240px) {
+    width: 200px;
+    row-gap: 20px;
+  }
+  @media (max-width: 880px) {
+    width: 150px;
+    row-gap: 20px;
+  }
 `;
 
 SearchInputWrapper.SearchIcon = styled.img`

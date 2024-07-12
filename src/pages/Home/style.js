@@ -31,6 +31,17 @@ Container.Title = styled.h1`
     font-size: 36px;
     font-family: var(--mulish);
   }
+  @media (max-width: 1240px) {
+    font-size: 26px;
+  }
+  .title {
+    @media (max-width: 1240px) {
+      font-size: 26px;
+    }
+  }
+  @media (max-width: 880px) {
+    font-size: 18px;
+  }
 `;
 
 Container.SubTitle = styled.p`
@@ -49,6 +60,14 @@ const BookCardWrapper = styled.div`
   column-gap: 20px;
   width: 100%;
   padding-top: 26px;
+  @media (max-width: 1240px) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+  }
+  @media (max-width: 880px) {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
 `;
 
 const ISBNInput = styled(TextField)({
